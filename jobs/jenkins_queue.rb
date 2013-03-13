@@ -5,7 +5,7 @@ jenkins_host = '--- YOUR HOST HERE ---'
 
 SCHEDULER.every '2m', :first_in => 0 do
   http = Net::HTTP.new(jenkins_host)
-  url  = '/queue/api/json' % jenkins_view
+  url  = '/queue/api/json'
 
   response = http.request(Net::HTTP::Get.new(url))
   items    = JSON.parse(response.body)['items']
