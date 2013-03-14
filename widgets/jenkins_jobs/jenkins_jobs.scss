@@ -3,6 +3,9 @@
 // ----------------------------------------------------------------------------
 .widget-jenkins-jobs {
   background-color: lightgrey;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 
   .title {
     color: black;
@@ -11,8 +14,7 @@
   .job {
     border-radius: 8px;
     float: left;
-    margin: 4px;
-    padding: 6px;
+    padding: 4px 0px;
   }
 
   .job[data-state="aborted"],
@@ -28,5 +30,69 @@
   .job[data-state="red"],
   .job[data-state="red_anime"] {
     background-color: red;
+  }
+
+  .job span {
+    padding: 0px 4px;
+  }
+}
+
+.widget-jenkins-jobs[data-cols="4"] {
+  .job {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    width: 23.75%;
+  }
+
+  .job:nth-child(4n + 1) {
+    clear: left;
+  }
+}
+
+.widget-jenkins-jobs[data-cols="5"] {
+  .job {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    width: 18.8%;
+  }
+
+  .job:nth-child(5n + 1) {
+    clear: left;
+  }
+}
+
+.widget-jenkins-jobs[data-cols="6"] {
+  .job {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    width: 15.5%;
+  }
+
+  .job:nth-child(6n + 1) {
+    clear: left;
+  }
+}
+
+.widget-jenkins-jobs[data-cols="7"] {
+  .job {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    width: 13.14285%;
+  }
+
+  .job:nth-child(7n + 1) {
+    clear: left;
+  }
+}
+
+.widget-jenkins-jobs[data-cols="8"] {
+  .job {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    width: 11.375%;
+  }
+
+  .job:nth-child(8n + 1) {
+    clear: left;
   }
 }
