@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+// Widget-jenkins-weather styles
+// ----------------------------------------------------------------------------
+.widget-jenkins-weather {
+  background-color: lightgrey;
+
+  .title {
+    color: black;
+  }
+
+  .ranges {
+    margin: 0 auto
+  }
+
+  .range {
+    background-color: grey;
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    text-align: right;
+    padding-right: 12px;
+    width: 60px;
+  }
+
+  .range:first-child {
+    margin-left: 0;
+  }
+
+  .range[data-range="80plus"] {
+    background-image: url("/assets/jenkins_weather/health-80plus.gif")
+  }
+
+  .range[data-range="60to79"] {
+    background-image: url("/assets/jenkins_weather/health-60to79.gif")
+  }
+
+  .range[data-range="40to59"] {
+    background-image: url("/assets/jenkins_weather/health-40to59.gif")
+  }
+
+  .range[data-range="20to39"] {
+    background-image: url("/assets/jenkins_weather/health-20to39.gif")
+  }
+
+  .range[data-range="00to19"] {
+    background-image: url("/assets/jenkins_weather/health-00to19.gif")
+  }
+}
