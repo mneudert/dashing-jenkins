@@ -6,7 +6,7 @@ jenkins_view = '--- YOUR VIEW HERE ---'
 
 SCHEDULER.every '2m', :first_in => 0 do
   http = Net::HTTP.new(jenkins_host)
-  url  = '/view/%s/api/json' % jenkins_view
+  url  = '/view/%s/api/json?tree=jobs[color]' % jenkins_view
 
   response = http.request(Net::HTTP::Get.new(url))
   jobs     = JSON.parse(response.body)['jobs']
