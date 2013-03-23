@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------------
+// Widget-jenkins-jobstates styles
+// ----------------------------------------------------------------------------
+.widget-jenkins-jobstates {
+  background-color: lightgrey;
+
+  .title {
+    color: black;
+  }
+
+  .jobs {
+    margin: 0 auto
+  }
+
+  .job {
+    border-radius: 24px;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 12px;
+    text-align: center;
+    width: 60px;
+  }
+
+  .job:first-child {
+    margin-left: 0;
+  }
+
+  .job[data-state="blue"] {
+    background-color: green;
+  }
+
+  .job[data-state="red"] {
+    background-color: red;
+  }
+
+  .job[data-state="grey"] {
+    background-color: grey;
+  }
+}
