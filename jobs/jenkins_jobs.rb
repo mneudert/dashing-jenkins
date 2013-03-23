@@ -12,9 +12,18 @@ SCHEDULER.every '2m', :first_in => 0 do
   jobs     = JSON.parse(response.body)['jobs']
 
   if jobs
-    jobs.map! do |job|
-      { name: job['name'], state: job['color'] }
-    end
+    jobs.map! { |job|
+      color = 'grey'
+
+      case job['color']
+      when 'blue', 'blue_anime'
+        color = 'blue'
+      when 'red', 'red_anime'
+        color = 'red'
+      end
+
+      { name: job['name'], state: color }
+    }
 
     jobs.sort_by { |job| job['name'] }
 

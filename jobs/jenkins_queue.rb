@@ -16,9 +16,18 @@ SCHEDULER.every '2m', :first_in => 0 do
 
     items = items[0..7]
 
-    items.map! do |item|
-      { name:  item['task']['name'], state: item['task']['color'] }
-    end
+    items.map! { |item|
+      color = 'grey'
+
+      case item['task']['color']
+      when 'blue', 'blue_anime'
+        color = 'blue'
+      when 'red', 'red_anime'
+        color = 'red'
+      end
+
+      { name:  item['task']['name'], state: color }
+    }
 
     send_event('jenkins_queue', { items: items })
   end

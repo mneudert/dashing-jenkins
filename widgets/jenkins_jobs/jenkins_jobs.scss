@@ -17,19 +17,16 @@
     padding: 4px 0px;
   }
 
-  .job[data-state="aborted"],
-  .job[data-state="aborted_anime"] {
-    background-color: grey;
-  }
-
-  .job[data-state="blue"],
-  .job[data-state="blue_anime"] {
+  .job[data-state="blue"] {
     background-color: green;
   }
 
-  .job[data-state="red"],
-  .job[data-state="red_anime"] {
+  .job[data-state="red"] {
     background-color: red;
+  }
+
+  .job[data-state="grey"] {
+    background-color: grey;
   }
 
   .job span {
